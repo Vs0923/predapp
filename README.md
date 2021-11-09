@@ -1,7 +1,10 @@
 # predapp
-flask web integrated with ML
+Flask web integrated with ML.
+
 The App has a built in machine learning model which detects whether the person has covid-19 or malaria based on the questions answered.
+
 Model is trained in google colab [link](https://colab.research.google.com/drive/1N9hVCDSdfv5UftW-iFVBRFv7YUbcFApX?usp=sharing)
+
 The weights are then integrated using flask for web app.
 
 # Usage:
