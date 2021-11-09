@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block body %}
+
+<form class="myform" action="/predict" method="POST">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+  <label for="age">Age:</label><br>
+  <input type="number" id="age" name="age">
+  <h3>Loss of smell/Taste:</h3>
+  <select name="Loss" >
+    <option value="">choose</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select>
+  <h3>discolouring of nails area:</h3>
+  <select name="dis">
+    <option value="" disabled selected>choose Your option</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select>
+  <h3>Fever:</h3>
+  <select name="Fever">
+    <option value="" disabled selected>choose Your option</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select>
+  <h3>Body Pain:</h3>
+  <select name="Bp">
+    <option value="" disabled selected>choose Your option</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select>
+  <h3>Sore Throat:</h3>
+  <select name="st">
+    <option value="" disabled selected>choose Your option</option>
+    <option value="1">YES</option>
+    <option value="0">NO</option>
+  </select>
+
+  <button class="btn" type="submit">Submit</button>
+  {% if data:%}
+  <h4 style="color:{{data[1]}}">
+    {{data[0]}}
+  </h4>
+  {% endif %}
+   
+</form>
+
+
+
+{% endblock %}
